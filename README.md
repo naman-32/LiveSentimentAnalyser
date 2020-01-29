@@ -17,7 +17,7 @@ csecret=""
 atoken=""
 asecret=""
 ```
-in [twitter_stream.py](https://github.com/naman-32/LiveSentimentAnalyser/blob/master/twitter_stream.py)
+6. in [twitter_stream.py](https://github.com/naman-32/LiveSentimentAnalyser/blob/master/twitter_stream.py)
 7. This will take time about an hour depending on the processor. 
 ```
 python3 run_once_script.py
@@ -25,5 +25,13 @@ python3 run_once_script.py
 8. Done! Great for testing run test.py file and see the output.
 
 ## Using SentimentAnalyser
-1. Clean the [output_from_twitter] (https://github.com/naman-32/LiveSentimentAnalyser/blob/master/output_from_twitter) file each time sentiment analyser is run.
-2. Change keyword 
+1. Clean the [output_from_twitter](https://github.com/naman-32/LiveSentimentAnalyser/blob/master/output_from_twitter) file each time sentiment analyser is run.
+2. Change keyword to track  by replacing desired keyword with "awesome" in last line of in [twitter_stream.py](https://github.com/naman-32/LiveSentimentAnalyser/blob/master/twitter_stream.py) shown below.
+```
+twitterStream.filter(track=["awesome"])
+```
+3. Open two terminals with virtual environment activated.Run these two commands in separate terminals.
+```
+python3 twitter_stream.py
+python3 plotting_live_data.py
+```
