@@ -4,11 +4,11 @@ A live sentiment analyser about some keywords using live tweets from [twitter](h
 ## Table of contents
 * [Methodology](#Methodology)
 * [Setup](#setup)
-* [Using SentimentAnalyser](#Using SentimentAnalyser)
-* [Sample output](#Sample output)
-* [Tools Used](#Tools Used)
+* [Using SentimentAnalyser](#UsingSentimentAnalyser)
+* [Sample output](#Sampleoutput)
+* [Tools Used](#ToolsUsed)
 * [Source](#Source)
-* [Future Work](#Future Work)
+* [Future Work](#FutureWork)
 
 ## Methodology
 This  application can provide live and latest sentiment about particular topic by analysing the tweets received from twitter developer API through the sentiment analysis module. Prediction of each tweet is done using ensemble learning combining votes of various algorithms such SVM , NuSVM , Stochastic gradient descent , BayesClassifier and others. Algorithms were selected based on their performance on test set derived by partioning data in [short reviews](https://github.com/naman-32/LiveSentimentAnalyser/tree/master/short_reviews) directory , which contains pos and neg reviews file respectively. I got 75% average accuracy of ensemble classifier by extracting 5000 most relevant word features. Around 10,600 reviews are available and 600 reviews were used for testing after random shuffling.Then algos were trained , pickled and used. Only reviews with **more than 80% confidence** given by essemble classifier are used to plot live sentiment graph using matplotlib.         
