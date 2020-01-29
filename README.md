@@ -1,5 +1,5 @@
 ## LiveSentimentAnalyser
-A live sentiment analyser about some keywords using live tweets from [twitter](https://twitter.com).
+A live sentiment analyser about keywords given using live tweets from [twitter](https://twitter.com).
 
 ## Table of contents
 * [Methodology](#Methodology)
