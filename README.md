@@ -21,7 +21,7 @@ atoken=""
 asecret=""
 ```
 
-7. This will take time about an hour depending on the processor. 
+7. Run this command **once** , this will take time about an hour depending on the processor. 
 ```
 python3 run_once_script.py
 ```
@@ -29,18 +29,27 @@ python3 run_once_script.py
 
 ## Using SentimentAnalyser
 1. Clean the [output_from_twitter](https://github.com/naman-32/LiveSentimentAnalyser/blob/master/output_from_twitter) file each time sentiment analyser is run.
-2. Change keyword to track  by replacing desired keyword with "awesome" in last line of in [twitter_stream.py](https://github.com/naman-32/LiveSentimentAnalyser/blob/master/twitter_stream.py) shown below.
+2. Change keyword in track argument by replacing desired keyword with "awesome" in last line of in [twitter_stream.py](https://github.com/naman-32/LiveSentimentAnalyser/blob/master/twitter_stream.py) shown below.
 ```
 twitterStream.filter(track=["awesome"])
 ```
-3. Open two terminals with virtual environment activated.Run these two commands in separate terminals.
+3. Open two terminals with virtual environment activated. Run these two commands in **separate terminals simultaneously** .
 ```
 python3 twitter_stream.py
 python3 plotting_live_data.py
 ```
+
 ## Sample output
 Here is a sample output that I got using keyword "awesome"
+
 ![OUTPUT](images/output.jpg)
+
+## Tools Used
+- NLTK
+- Twitter Developer API
+- Pickle
+- Scikit Learn
+- Matplotlib
 
 ## Source
 - [dataset from https://pythonprogramming.net/](https://pythonprogramming.net/static/downloads/short_reviews/)
